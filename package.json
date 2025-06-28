@@ -4,11 +4,12 @@
   "description": "Custom SSH terminal server similar to Primegen's coffee shop",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node start.js",
     "dev": "nodemon server.js",
     "ip": "node get-ip.js",
     "setup": "node generate-keys.js",
-    "railway": "bash railway-setup.sh"
+    "railway": "bash railway-setup.sh",
+    "health": "node health-check.js"
   },
   "keywords": ["ssh", "terminal", "server", "nodejs"],
   "author": "Marcos",
