@@ -1,0 +1,10 @@
+keys/
+node_modules/
+*.log
+.env
+.DS_Store
+Thumbs.db
+
+# Keep keys for deployment
+!keys/host_key
+!keys/host_key.pub
