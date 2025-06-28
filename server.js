@@ -29,8 +29,14 @@ function ensureHostKey() {
     // Generate RSA key pair
     const { privateKey, publicKey } = crypto.generateKeyPairSync('rsa', {
       modulusLength: 2048,
-      format: 'pem',
-      type: 'pkcs1'
+      publicKeyEncoding: {
+        type: 'spki',
+        format: 'pem'
+      },
+      privateKeyEncoding: {
+        type: 'pkcs1',
+        format: 'pem'
+      }
     });
     
     // Save keys
